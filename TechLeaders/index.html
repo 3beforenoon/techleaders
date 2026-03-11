@@ -22,9 +22,22 @@
     h3 {
         color:#C08552; 
         background-color: #FFF8F0;
+        border-style: groove;
+        border-color: #C08552;
+        border-width: 1px;
+        border-radius: 10px;
+        padding: 8px;
+        margin-right: 70%;
     }
     button {
         background-color: #C08552;
+        color: white; 
+        margin: 5px;
+        height: 50px;
+        border-style: groove;
+        border-width: 1px;
+        border-radius: 10px;
+        padding: 10px;
     }
     /* TABLET */
     @media (max-width: 1024px) {
@@ -86,9 +99,12 @@
     .heroDiv div:first-child {
         margin:100px;
     }
+         .ceramics {
+        border-radius: 10%;
+    }
     /* OUR STORY SECTION STYLING */
     .ourStory {
-        background-color: #FFF8F0;
+        background-color: rgb(193 134 83 / 0.05);
         display:flex;
         justify-content:center;
         align-items:center;
@@ -110,7 +126,7 @@
             <button type="button">VIEW MORE</button>
         </div>
         <div>
-            <img src="images/vase.png" alt="Ceramics"/>
+            <img class="ceramics" src="images/vase.png" alt="Ceramics"/>
         </div>
     </div>
     <!-- OUT STORY -->
@@ -122,4 +138,5 @@
         </div>
      </div>
 </body>
+
 </html>
