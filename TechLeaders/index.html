@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handcrafted ceramics for you</title> 
+    <link rel="icon" type="image/x-icon" src="images/favicon.ico">
+<!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<!-- Styling -->
+ <style>
+    body {
+        background-color: #f8f7f6;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+    h1 {
+        color: #4B2E2B;
+    }
+    h2 {
+        color: #4B2E2B;
+    }
+    h3 {
+        color:#C08552; 
+        background-color: #FFF8F0;
+    }
+    button {
+        background-color: #C08552;
+    }
+    /* TABLET */
+    @media (max-width: 1024px) {
+
+    .heroDiv {
+        padding: 60px 40px;
+    }
+
+    .heroDiv img {
+        max-width: 400px;
+    }
+
+    .ourStory {
+        padding: 80px 15%;
+    }
+
+    }
+    /* PHONE */
+    @media (max-width: 768px) {
+
+    .heroDiv {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .heroDiv div {
+        width: 100%;
+    }
+
+    .heroDiv img {
+        max-width: 300px;
+        margin-top: 30px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .ourStory {
+        padding: 60px 30px;
+    }
+
+}
+    /* HERO SECTION STYLING */
+    .heroDiv {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding: 100px;
+    }
+    .herotDiv div {
+        text-align: center;
+    }
+    .heroDiv img {
+        width:700px;
+        display:block;
+    }
+    .heroDiv div:first-child {
+        margin:100px;
+    }
+    /* OUR STORY SECTION STYLING */
+    .ourStory {
+        background-color: #FFF8F0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding: 100px;
+    }
+    .ourStory div {
+        text-align: center;
+    }
+ </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <div class="heroDiv">
+        <div>
+            <h3>New Collection 2024</h3>
+            <h1 style="font-size:450%">Handcrafted <i style="color:#C08552">Ceramics</i> for Your Home</h1>
+            <p>Experience the warmth of artisanal craftsmanship with our unique, hand-thrown pottery collection designed for modern living.</p>
+            <button type="button">SHOP NOW</button>
+            <button type="button">VIEW MORE</button>
+        </div>
+        <div>
+            <img src="images/vase.png" alt="Ceramics"/>
+        </div>
+    </div>
+    <!-- OUT STORY -->
+     <div class="ourStory">
+        <div>
+            <img src="images/eco.png" style="width:60px"/>
+            <h2>Our Story</h2>
+            <p>Born from a passion for tactile beauty and slow living, each piece in our collection is meticulously crafted by hand in our small studio. We believe that everyday objects should bring joy and a sense of connection to the natural world. Our process respects traditional techniques while embracing contemporary silhouettes.</p>
+        </div>
+     </div>
+</body>
+</html>
