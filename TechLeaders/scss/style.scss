@@ -1,8 +1,8 @@
-@use 'variables' as *;
+@use './variables' as *;
 
 body {
-    font-family: "Plus Jakarta Sans", sans-serif !important;
-    color: #5a5a56;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: $body-color;
 }
 
 /* COLLECTION SECTION STYLING */
@@ -15,7 +15,7 @@ body {
 }
 
 .new-collection {
-    color: rgba(193, 134, 83, 1);
+    color: $new-collection-color;
     background-color: rgb(193 134 83 / 0.1);
     border-width: 1px;
     border-radius: 10px;
