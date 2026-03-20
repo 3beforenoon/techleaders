@@ -5,6 +5,22 @@ body {
     color: $body-color;
 }
 
+/* NAVBAR STYLING */
+.navbar-styling {
+    background-color: $background-color;
+    padding: 10px 20px;
+
+    .brush-logo {
+        width: 40px; 
+        margin-right: 10px;
+    }
+
+    .luxe-logo {
+        margin-right: 50px;
+    }
+}
+
+
 /* COLLECTION SECTION STYLING */
 .new-div {
     display: flex;
@@ -15,7 +31,7 @@ body {
     
     .new-collection {
         color: $new-collection-color;
-        background-color: rgb(193 134 83 / 0.1);
+        background-color: $second-background;
         border-width: 1px;
         border-radius: 10px;
         padding: 10px;
@@ -87,7 +103,7 @@ body {
 
 /* OUR STORY STYLING */
 .our-story {
-    background-color: rgb(193 134 83 / 0.1);
+    background-color: $second-background;
     display: flex;
     text-align: center;
     padding: clamp(50px, 10vw, 100px);
