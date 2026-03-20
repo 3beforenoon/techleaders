@@ -8,11 +8,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px;
+  padding: 40px;
   text-align: left;
 }
-
-.new-collection {
+.new-div .new-collection {
   color: rgb(193, 134, 83);
   background-color: rgba(193, 134, 83, 0.1);
   border-width: 1px;
@@ -27,13 +26,15 @@ body {
   margin-left: 100px;
   margin-right: 100px;
 }
-
-.new-text {
+.new-handcrafted .new-text {
   color: #4B2E2B;
   line-height: 1;
-  font-size: clamp(2rem, 4vw, 5rem);
+  font-size: clamp(2.5rem, 4vw, 5rem);
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.new-handcrafted i {
+  color: #C08552;
 }
 
 /* BUTTONS in Collections */
@@ -46,8 +47,8 @@ body {
 }
 
 .btn.view-more {
-  padding: 15px 50px;
   border-radius: 20px;
+  padding: 15px 50px;
   margin: 10px;
 }
 
@@ -56,8 +57,7 @@ body {
   display: flex;
   justify-content: center;
 }
-
-.ceramics-img {
+.ceramics img {
   border-radius: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -74,6 +74,11 @@ body {
   text-align: center;
   padding: clamp(50px, 10vw, 100px) clamp(20px, 10vw, 200px);
 }
+.our-story .headline1 {
+  color: #4B2E2B;
+  font-size: clamp(1rem, 2vw, 3rem);
+  margin-top: 50px;
+}
 
 @media (min-width: 1400px) {
   .our-story {
@@ -81,32 +86,25 @@ body {
     padding-right: 500px;
   }
 }
-.headline1 {
-  color: #4B2E2B;
-  font-size: clamp(1rem, 2vw, 3rem);
-  margin-top: 50px;
-}
-
 /* FEATURED COLLECTION */
-.headline2 {
-  color: #4B2E2B;
-  font-size: clamp(1rem, 2vw, 3rem);
-  padding-top: 50px;
-  padding-left: 150px;
-}
-
 .featured-collection {
   display: flex;
   text-align: left;
   overflow-x: hidden;
 }
-
-.featured-description {
+.featured-collection .headline2 {
+  color: #4B2E2B;
+  font-size: clamp(1rem, 2vw, 3rem);
+  padding-top: 50px;
+  padding-left: 150px;
+}
+.featured-collection .featured-description {
   padding-bottom: 50px;
   padding-left: 150px;
 }
-
-/* images */
+.featured-collection {
+  /* images */
+}
 .featured-collection img {
   border-radius: 5%;
   width: 350px;

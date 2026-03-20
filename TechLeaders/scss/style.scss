@@ -10,59 +10,63 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px;
+    padding: 40px;
     text-align: left;
+    
+    .new-collection {
+        color: $new-collection-color;
+        background-color: rgb(193 134 83 / 0.1);
+        border-width: 1px;
+        border-radius: 10px;
+        padding: 10px;
+        display: inline-block;
+        margin-left: 100px;
+    }
 }
 
-.new-collection {
-    color: $new-collection-color;
-    background-color: rgb(193 134 83 / 0.1);
-    border-width: 1px;
-    border-radius: 10px;
-    padding: 10px;
-    display: inline-block;
-    margin-left: 100px;
-}
 
 .new-handcrafted {
     margin-bottom: 50px;
     margin-left: 100px;
     margin-right: 100px;
-}
+    
+    .new-text {
+        color: #4B2E2B;
+        line-height: 1;
+        font-size: clamp(2.5rem, 4vw, 5rem);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
-.new-text {
-    color: #4B2E2B;
-    line-height: 1;
-    font-size: clamp(2rem, 4vw, 5rem);
-    margin-top: 10px;
-    margin-bottom: 10px;
+    i { 
+        color:#C08552
+     }
 }
-
 
 /* BUTTONS in Collections */
 .btn.button-shop {
     background-color: #C08552;
     color: white;
-    border-radius: 20px;
-    padding: 15px 50px;
-    margin: 10px;
+    border-radius: $buttons-border-radius;
+    padding: $buttons-padding;
+    margin: $buttons-margin;
 }
 
 .btn.view-more {
-    padding: 15px 50px;
-    border-radius: 20px;
-    margin: 10px;
+    border-radius: $buttons-border-radius;
+    padding: $buttons-padding;
+    margin: $buttons-margin;
 }
 
 /*the main image container*/
 .ceramics {
     display: flex;
     justify-content: center;
-}
 
-.ceramics-img {
-    border-radius: 5%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    img {
+        border-radius: 5%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 }
 
 @media (min-width: 1400px) {
@@ -77,6 +81,12 @@ body {
     display: flex;
     text-align: center;
     padding: clamp(50px, 10vw, 100px) clamp(20px, 10vw, 200px);
+    
+    .headline1 {
+        color: #4B2E2B;
+        font-size: clamp(1rem, 2vw, 3rem);
+        margin-top: 50px;
+    }
 }
 
 
@@ -87,33 +97,28 @@ body {
     }
 }
 
-.headline1 {
-  color: #4B2E2B;
-  font-size: clamp(1rem, 2vw, 3rem);
-  margin-top: 50px;
-}
-
 /* FEATURED COLLECTION */ 
-.headline2 {
-  color: #4B2E2B;
-  font-size: clamp(1rem, 2vw, 3rem);
-  padding-top: 50px;
-  padding-left: 150px;
-}
-
 .featured-collection {
     display: flex;
     text-align: left;
     overflow-x:hidden;
-}
+    
+    .headline2 { 
+        color: #4B2E2B;
+        font-size: clamp(1rem, 2vw, 3rem);
+        padding-top: 50px;
+        padding-left: 150px;
+    }
 
-.featured-description {
+    .featured-description {
     padding-bottom: 50px;
     padding-left: 150px;
-}
-/* images */
-.featured-collection img{
+    }
+
+    /* images */
+    img {
     border-radius: 5%;
     width:350px;
     margin: 20px;
+    }
 }
