@@ -159,6 +159,7 @@ body {
 }
 @media (max-width: 800px) {
   .featured-collection .headline2 {
+    text-align: center;
     padding: 10px;
   }
   .featured-collection .featured-description {
