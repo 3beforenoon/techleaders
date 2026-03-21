@@ -75,18 +75,22 @@ body {
   border-radius: 5%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 @media (min-width: 1400px) {
-  .ceramics-img {
+  .ceramics .ceramics-img {
     width: 800px;
   }
 }
+
 @media (max-width: 800px) {
   .new-div {
     text-align: center;
   }
   .new-div .new-collection {
     margin-left: 0px;
+  }
+  .new-handcrafted {
+    padding: 10px;
+    margin: 0px;
   }
 }
 /* OUR STORY STYLING */
@@ -104,13 +108,13 @@ body {
 .our-story img {
   width: 60px;
 }
-
 @media (min-width: 1400px) {
-  .our-story {
+  .our-story .our-story {
     padding-left: 500px;
     padding-right: 500px;
   }
 }
+
 /* FEATURED COLLECTION */
 .featured-collection {
   display: flex;
@@ -152,6 +156,17 @@ body {
   border-radius: 5%;
   width: 350px;
   margin: 10px;
+}
+@media (max-width: 800px) {
+  .featured-collection .headline2 {
+    padding: 10px;
+  }
+  .featured-collection .featured-description {
+    padding: 10px;
+  }
+  .featured-collection .featured-images {
+    padding: 0px 50px 50px 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
