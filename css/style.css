@@ -5,7 +5,7 @@ body {
 
 /* NAVBAR STYLING */
 .navbar-styling {
-  background-color: #f8f7f6;
+  background-color: #F8F7F6;
   padding: 10px 20px;
 }
 .navbar-styling .brush-logo {
@@ -143,6 +143,9 @@ body {
   padding-bottom: 50px;
   padding-left: 130px;
 }
+.featured-collection .features-price {
+  padding-bottom: 50px;
+}
 .featured-collection {
   /* images */
 }
@@ -168,6 +171,14 @@ body {
   .featured-collection .featured-images {
     padding: 0 50px 50px 50px;
   }
+}
+
+/* CONTACT US */
+.contact-us {
+  background-color: #F9F3ED;
+  display: flex;
+  text-align: center;
+  padding: clamp(20px, 10vw, 100px);
 }
 
 /*# sourceMappingURL=style.css.map */

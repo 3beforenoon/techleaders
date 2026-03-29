@@ -164,6 +164,10 @@ body {
         padding-left: 130px;
     }
 
+    .features-price {
+        padding-bottom: 50px;
+    }
+
     /* images */
 
     .featured-images {
@@ -193,4 +197,12 @@ body {
             padding: 0 50px 50px 50px;
         }
     }
+}
+
+/* CONTACT US */
+.contact-us {
+    background-color: $second-background;
+    display: flex;
+    text-align: center;
+    padding: clamp(20px, 10vw, 100px);
 }
