@@ -55,7 +55,7 @@ body {
         margin-bottom: 10px;
     }
 
-    i {
+    .italic {
         color: #C08552
     }
 }
@@ -97,13 +97,13 @@ body {
         text-align: center;
 
         .new-collection {
-            margin-left: 0px;
+            margin-left: 0;
         }
     }
 
     .new-handcrafted {
         padding: 10px;
-        margin: 0px;
+        margin: 0;
     }
 }
 
@@ -120,7 +120,7 @@ body {
         margin-top: 10px;
     }
 
-    img {
+    .leaf-icon {
         width: 60px;
     }
 
@@ -151,7 +151,7 @@ body {
     .feature-headline {
         color: $headline-color;
         font-weight: bold;
-        margin: 0px;
+        margin: 0;
     }
 
     .features-price {
@@ -170,10 +170,10 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0px 140px;
+        padding: 0 140px;
     }
 
-    img {
+    .collection-image {
         border-radius: 5%;
         width: 350px;
         margin: 10px;
@@ -190,7 +190,7 @@ body {
         }
 
         .featured-images {
-            padding: 0px 50px 50px 50px;
+            padding: 0 50px 50px 50px;
         }
     }
 }
