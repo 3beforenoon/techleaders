@@ -111,24 +111,65 @@
         <p>Give us your feedback!</p>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-outline-secondary view-more" data-bs-toggle="modal"
-          data-bs-target="#exampleModal">
+          data-bs-target="#contactUsForm">
           CONTACT US
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+        <div class="modal fade" id="contactUsForm" tabindex="-1" aria-labelledby="contactUsFormLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="contactUsFormLabel">Contact us form</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                ...
+                <form>
+                  <!-- The information section -->
+                  <div class="row g-2 mb-3">
+                    <label for="contactUsFormControlInput1" class="form-label">Your information</label>
+                    <!-- The name field -->
+                    <div class="col-md">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="First name"
+                          aria-label="Your first name" value="John">
+                        <label for="floatingInputGrid">First name</label>
+                      </div>
+                    </div>
+                    <!-- The surname field -->
+                    <div class="col-md">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="Last name"
+                          aria-label="Your last name" value="Smith">
+                        <label for="floatingInputGrid">Last name</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- The email section -->
+                  <div class="row">
+                    <div class="mb-3">
+                      <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com"
+                          value="name@example.com">
+                        <label for="floatingInputGrid">Email address</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- The message section -->
+                  <div class="form-floating">
+                    <div class="mb-3">
+                      <label for="contactUsFormControlTextarea1" class="form-label">Your message for us</label>
+                      <textarea class="form-control" id="contactUsFormControlTextarea1" rows="3"></textarea>
+                      <div id="contactTextHelp" class="form-text">This field cannot be empty or longer than 200
+                        characters.</div>
+                    </div>
+                  </div>
+                </form>
               </div>
+              <!-- The button section -->
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn btn-outline-secondary">Submit</button>
               </div>
             </div>
           </div>
