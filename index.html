@@ -125,17 +125,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form>
+                <form id="contactModalForm" novalidate>
                   <!-- The information section -->
                   <div class="row g-2 mb-3">
-                    <label for="contactUsFormControlInput1" class="form-label">Your information</label>
+                    <label for="floatingInputName" class="form-label">Your information</label>
                     <!-- The name field -->
                     <div class="col-md">
                       <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInputName" placeholder="First name"
-                          aria-label="Your first name" value="John">
+                        <input type="text" class="form-control" id="floatingInputName" name="firstName"
+                          placeholder="First name" aria-label="Your first name" value="John" autocomplete="given-name">
                         <label for="floatingInputName">First name</label>
                       </div>
+                      <div id="floatingInputName-error" class="text-danger small mt-1 d-none" role="alert">Name must be at least 3 characters.</div>
                     </div>
                     <!-- The surname field -->
                     <div class="col-md">
@@ -169,7 +170,7 @@
               </div>
               <!-- The button section -->
               <div class="modal-footer">
-                <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                <button type="submit" class="btn btn-outline-secondary" form="contactModalForm">Submit</button>
               </div>
             </div>
           </div>
