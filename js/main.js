@@ -95,3 +95,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+/* EMAIL FIELD */
+document.addEventListener('DOMContentLoaded', () => {
+  const emailInput = document.getElementById('floatingInputEmail');
+  const errorE = document.getElementById('floatingInputEmail-error');
+  const formE = document.getElementById('contactModalForm');
+
+  if (!emailInput || !errorE || !formE) return;
+
+  /** Non-empty value must satisfy <input type="email"> (browser email rules via checkValidity). */
+  function emailIsValid() {
+    if (emailInput.value.trim().length === 0) return false;
+    return emailInput.checkValidity();
+  }
+
+  function showEmailError(show) {
+    if (show) {
+      errorE.classList.remove('d-none');
+      emailInput.classList.add('is-invalid');
+      emailInput.setAttribute('aria-invalid', 'true');
+    } else {
+      errorE.classList.add('d-none');
+      emailInput.classList.remove('is-invalid');
+      emailInput.removeAttribute('aria-invalid');
+    }
+  }
+
+  /** Live feedback while typing. */
+  emailInput.addEventListener('input', () => {
+    const len = emailInput.value.trim().length;
+    if (len === 0) {
+      showEmailError(false);
+      return;
+    }
+    showEmailError(!emailIsValid());
+  });
+
+  emailInput.addEventListener('blur', () => {
+    if (!emailIsValid()) {
+      showEmailError(true);
+    }
+  });
+
+  formE.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!emailIsValid()) {
+      showEmailError(true);
+      emailInput.focus();
+    }
+  });
+});
