@@ -110,18 +110,18 @@
       <div>
         <p>Give us your feedback!</p>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-outline-secondary view-more" data-bs-toggle="modal"
-          data-bs-target="#contactUsForm">
+        <button type="button" id="contactUsFormButton" class="btn btn-outline-secondary view-more"
+          data-bs-toggle="modal" data-bs-target="#contactUsModal">
           CONTACT US
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="contactUsForm" tabindex="-1" aria-labelledby="contactUsFormLabel"
+        <div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalTitle"
           aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="contactUsFormLabel">Contact us form</h1>
+                <h1 class="modal-title fs-5" id="contactUsModalTitle">Contact us form</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -162,11 +162,11 @@
                   <!-- The message section -->
                   <div class="form-floating">
                     <div class="mb-3">
-                      <label for="contactUsFormControlTextarea1" class="form-label">Your message for us</label>
-                      <textarea class="form-control" id="contactUsFormControlTextarea1" rows="3"></textarea>
-                      <div id="contactTextHelp" class="form-text">This field cannot be empty or longer than 200
-                        characters.</div>
+                      <label for="contactUsForm" class="form-label">Your message for us</label>
+                      <textarea class="form-control" id="contactUsForm" rows="3"></textarea>
                     </div>
+                      <div id="contactUsForm-error" class="text-danger small mt-1 d-none" role="alert">This field cannot be empty or longer than 200
+                      characters.</div>
                   </div>
                 </form>
               </div>

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /** Live feedback: error appears while typing if the value is too short (before Submit). */
+  /** Live feedback while typing. */
   nameInput.addEventListener('input', () => {
     const len = nameInput.value.trim().length;
     if (len === 0) {
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /** Live feedback: error appears while typing if the value is too short (before Submit). */
+  /** Live feedback while typing.  */
   lastNameInput.addEventListener('input', () => {
     const len = lastNameInput.value.trim().length;
     if (len === 0) {
@@ -104,17 +104,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!emailInput || !errorE || !formE) return;
 
-  /** Non-empty value must satisfy <input type="email"> (browser email rules via checkValidity). */
   function emailIsValid() {
-    if (emailInput.value.trim().length === 0) return false;
-    return emailInput.checkValidity();
+    return emailInput.type = 'email';
   }
 
   function showEmailError(show) {
     if (show) {
       errorE.classList.remove('d-none');
       emailInput.classList.add('is-invalid');
-      emailInput.setAttribute('aria-invalid', 'true');
+      emnailInput.setAttribute('aria-invalid', 'true');
     } else {
       errorE.classList.add('d-none');
       emailInput.classList.remove('is-invalid');
@@ -122,14 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /** Live feedback while typing. */
+  /** Live feedback: error appears while typing if the value is too short (before Submit). */
   emailInput.addEventListener('input', () => {
-    const len = emailInput.value.trim().length;
-    if (len === 0) {
+    if (emailInput.type = 'email') {
       showEmailError(false);
       return;
     }
-    showEmailError(!emailIsValid());
+    showEmailError(emailInput.type !== 'email');
   });
 
   emailInput.addEventListener('blur', () => {
@@ -142,7 +139,58 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     if (!emailIsValid()) {
       showEmailError(true);
-      emailInput.focus();
+      Input.focus();
     }
   });
 });
+
+/* MESSAGE FIELD */
+document.addEventListener('DOMContentLoaded', () => {
+  const contactUsFormInput = document.getElementById('contactUsForm');
+  const errorCU = document.getElementById('contactUsForm-error');
+  const formCU = document.getElementById('contactModalForm');
+
+  if (!contactUsFormInput || !errorCU || !formCU) return;
+
+  function contactUsFormValid() {
+    const len = contactUsFormInput.value.trim().length;
+    return len >= 1 && len <= 200;
+  }
+
+  function showContactUsFormError(show) {
+    if (show) {
+      errorCU.classList.remove('d-none');
+      contactUsFormInput.classList.add('is-invalid');
+      contactUsFormInput.setAttribute('aria-invalid', 'true');
+    } else {
+      errorCU.classList.add('d-none');
+      contactUsFormInput.classList.remove('is-invalid');
+      contactUsFormInput.removeAttribute('aria-invalid');
+    }
+  }
+
+  /** Live feedback while typing. */
+  contactUsFormInput.addEventListener('input', () => {
+    const len = contactUsFormInput.value.trim().length;
+    if (len === 0) {
+      showContactUsFormError(false);
+      return;
+    }
+    showContactUsFormError(len > 200);
+  });
+
+  contactUsFormInput.addEventListener('blur', () => {
+    if (!contactUsFormValid()) {
+      showContactUsFormError(true);
+    }
+  });
+
+  formCU.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!contactUsFormValid()) {
+      showContactUsFormError(true);
+      contactUsFormInput.focus();
+    }
+  });
+});
+
