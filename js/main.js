@@ -105,14 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!emailInput || !errorE || !formE) return;
 
   function emailIsValid() {
-    return emailInput.type = 'email';
+    return emailInput.value.includes('@');
   }
 
   function showEmailError(show) {
     if (show) {
       errorE.classList.remove('d-none');
       emailInput.classList.add('is-invalid');
-      emnailInput.setAttribute('aria-invalid', 'true');
+      emailInput.setAttribute('aria-invalid', 'true');
     } else {
       errorE.classList.add('d-none');
       emailInput.classList.remove('is-invalid');
@@ -122,11 +122,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /** Live feedback: error appears while typing if the value is too short (before Submit). */
   emailInput.addEventListener('input', () => {
-    if (emailInput.type = 'email') {
+    const len = emailInput.value.trim().length;
+    if (len === 0) {
       showEmailError(false);
       return;
     }
-    showEmailError(emailInput.type !== 'email');
+    showEmailError(!emailIsValid());
   });
 
   emailInput.addEventListener('blur', () => {
@@ -139,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     if (!emailIsValid()) {
       showEmailError(true);
-      Input.focus();
+      emailInput.focus();
     }
   });
 });
