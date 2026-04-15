@@ -195,3 +195,48 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+/* SUBMIT BUTTON */
+/*document.addEventListener('DOMContentLoaded', () => {
+  const contactUsButton = document.getElementById('contact-us-button');
+
+
+  function contactUsButtonValid() {
+    if (nameIsValid && lastNameIsValid && emailIsValid && contactUsFormValid);
+    return contactUsButton.classList.remove('disabled');
+  }
+
+});*/
+document.addEventListener('DOMContentLoaded', () => {
+  const contactUsButton = document.querySelector('.contact-us-button');
+  const firstNameInput = document.getElementById('floatingInputName');
+  const lastNameInput = document.getElementById('floatingInputLastName');
+  const emailInput = document.getElementById('floatingInputEmail');
+  const messageInput = document.getElementById('contactUsForm');
+  const formButton = document.getElementById('contactModalForm');
+
+  if (!contactUsButton || !formButton || !firstNameInput || !lastNameInput || !emailInput || !messageInput) return;
+  function nameIsValid() {
+    return firstNameInput.value.trim().length >= 3;
+  }
+  function lastNameIsValid() {
+    return lastNameInput.value.trim().length >= 3;
+  }
+  function emailIsValid() {
+    return emailInput.value.trim().includes('@');
+  }
+  function contactUsFormValid() {
+    const len = messageInput.value.trim().length;
+    return len >= 1 && len <= 200;
+  }
+  function contactUsButtonValid() {
+    const isValid =
+      nameIsValid() &&
+      lastNameIsValid() &&
+      emailIsValid() &&
+      contactUsFormValid();
+    contactUsButton.disabled = !isValid;
+    contactUsButton.classList.toggle('disabled', !isValid);
+  }
+  formButton.addEventListener('input', contactUsButtonValid);
+  contactUsButtonValid();
+});
