@@ -136,7 +136,8 @@
                           placeholder="First name" aria-label="Your first name" value="John" autocomplete="given-name">
                         <label for="floatingInputName">First name</label>
                       </div>
-                      <div id="floatingInputName-error" class="text-danger small mt-1 d-none" role="alert">Name must be at least 3 characters.</div>
+                      <div id="floatingInputName-error" class="text-danger small mt-1 d-none" role="alert">Name must be
+                        at least 3 characters.</div>
                     </div>
                     <!-- The surname field -->
                     <div class="col-md">
@@ -145,7 +146,8 @@
                           aria-label="Your last name" value="Smith">
                         <label for="floatingInputLastName">Last name</label>
                       </div>
-                        <div id="floatingInputLastName-error" class="text-danger small mt-1 d-none" role="alert">Name must be at least 3 characters.</div>
+                      <div id="floatingInputLastName-error" class="text-danger small mt-1 d-none" role="alert">Name must
+                        be at least 3 characters.</div>
                     </div>
                   </div>
                   <!-- The email section -->
@@ -156,7 +158,8 @@
                           value="name@example.com">
                         <label for="floatingInputEmail">Email address</label>
                       </div>
-                        <div id="floatingInputEmail-error" class="text-danger small mt-1 d-none" role="alert">Use a valid email address.</div>
+                      <div id="floatingInputEmail-error" class="text-danger small mt-1 d-none" role="alert">Use a valid
+                        email address.</div>
                     </div>
                   </div>
                   <!-- The message section -->
@@ -165,14 +168,26 @@
                       <label for="contactUsForm" class="form-label">Your message for us</label>
                       <textarea class="form-control" id="contactUsForm" rows="3"></textarea>
                     </div>
-                      <div id="contactUsForm-error" class="text-danger small mt-1 d-none" role="alert">This field cannot be empty or longer than 200
+                    <div id="contactUsForm-error" class="text-danger small mt-1 d-none" role="alert">This field cannot
+                      be empty or longer than 200
                       characters.</div>
+                  </div>
+                  <div class="row g-2 mb-3">
+                    <div class="col-md">
+                      <label for="pwd" class="form-label password-field">Password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter your password" name="pswd">
+                    </div>
+                    <div class="col-md">
+                      <label for="pwd" class="form-label repeat-password">Repeat password:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Confirm your password" name="pswd">
+                    </div>
                   </div>
                 </form>
               </div>
               <!-- The button section -->
               <div class="modal-footer">
-                <button type="submit" class="btn btn-outline-primary disabled contact-us-button" data-bs-dismiss="modal" form="contactModalForm">Submit</button>
+                <button type="submit" class="btn btn-outline-primary disabled contact-us-button" data-bs-dismiss="modal"
+                  form="contactModalForm">Submit</button>
               </div>
             </div>
           </div>
