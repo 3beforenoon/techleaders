@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailInput = document.getElementById('floatingInputEmail');
   const messageInput = document.getElementById('contactUsForm');
   const formButton = document.getElementById('contactModalForm');
+  const formButtonClose = document.getElementById('contactUsModal');
 
   if (!contactUsButton || !formButton || !firstNameInput || !lastNameInput || !emailInput || !messageInput) return;
   function nameIsValid() {
@@ -242,11 +243,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
   /* CLEAR FIELDS ON SUBMIT */
   function contactUsButtonIsPressed () {
-      firstNameInput.value = "John";
-      lastNameInput.value = "Smith"; 
-      emailInput.value = "name@example.com"; 
-      messageInput.value = ""; 
-
+    alert("Thank you for your feedback!");
+    firstNameInput.value = "John";
+    lastNameInput.value = "Smith"; 
+    emailInput.value = "name@example.com"; 
+    messageInput.value = ""; 
   }
 
   contactUsButton.addEventListener('click', contactUsButtonIsPressed);
