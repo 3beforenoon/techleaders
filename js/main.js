@@ -239,4 +239,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   formButton.addEventListener('input', contactUsButtonValid);
   contactUsButtonValid();
+  
+  /* CLEAR FIELDS ON SUBMIT */
+  function contactUsButtonIsPressed () {
+      firstNameInput.value = "John";
+      lastNameInput.value = "Smith"; 
+      emailInput.value = "name@example.com"; 
+      messageInput.value = ""; 
+
+  }
+
+  contactUsButton.addEventListener('click', contactUsButtonIsPressed);
 });
