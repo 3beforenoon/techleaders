@@ -195,17 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/* SUBMIT BUTTON */
-/*document.addEventListener('DOMContentLoaded', () => {
-  const contactUsButton = document.getElementById('contact-us-button');
 
-
-  function contactUsButtonValid() {
-    if (nameIsValid && lastNameIsValid && emailIsValid && contactUsFormValid);
-    return contactUsButton.classList.remove('disabled');
-  }
-
-});*/
 document.addEventListener('DOMContentLoaded', () => {
   const contactUsButton = document.querySelector('.contact-us-button');
   const firstNameInput = document.getElementById('floatingInputName');
