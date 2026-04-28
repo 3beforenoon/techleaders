@@ -114,6 +114,10 @@
           data-bs-toggle="modal" data-bs-target="#contactUsModal">
           CONTACT US
         </button>
+        <div id="application-success" class="alert alert-success alert-dismissible fade show d-none" role="success">Your application was submitted.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+            </button></button></div>
 
         <!-- Modal -->
         <div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalTitle"
@@ -122,12 +126,13 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="contactUsModalTitle">Contact us form</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" id="close-button" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <form id="contactModalForm" novalidate>
                   <!-- The information section -->
                   <div class="row g-2 mb-3">
+                    
                     <label for="floatingInputName" class="form-label">Your information</label>
                     <!-- The name field -->
                     <div class="col-md">
@@ -139,6 +144,7 @@
                       <div id="floatingInputName-error" class="text-danger small mt-1 d-none" role="alert">Name must be
                         at least 3 characters.</div>
                     </div>
+                    
                     <!-- The surname field -->
                     <div class="col-md">
                       <div class="form-floating">
@@ -165,8 +171,8 @@
                   <!-- The message section -->
                   <div class="form-floating">
                     <div class="mb-3">
-                      <label for="contactUsForm" class="form-label">Your message for us</label>
-                      <textarea class="form-control" id="contactUsForm" rows="3"></textarea>
+                      <label for="contactUsForm" class="form-label">Your message for us:</label>
+                      <textarea class="form-control" id="contactUsForm" placeholder="Enter your message." rows="3"></textarea>
                     </div>
                     <div id="contactUsForm-error" class="text-danger small mt-1 d-none" role="alert">This field cannot
                       be empty or longer than 200
@@ -174,13 +180,15 @@
                   </div>
                   <div class="row g-2 mb-3">
                     <div class="col-md">
-                      <label for="pwd" class="form-label password-field">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter your password" name="pswd">
+                      <label for="pwd" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password-field" placeholder="Enter your password" name="pswd">
+                    <div id="password-field-error" class="text-danger small mt-1 d-none" role="alert">The password requires at least 8 characters long, a capital letter, a number and a special character.</div>
                     </div>
                     <div class="col-md">
-                      <label for="pwd" class="form-label repeat-password">Repeat password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Confirm your password" name="pswd">
-                    </div>
+                      <label for="pwd" class="form-label">Repeat password:</label>
+                    <input type="password" class="form-control" id="repeat-password" placeholder="Confirm your password" name="pswd">
+                    <div id="password-repeat-field-error" class="text-danger small mt-1 d-none" role="alert">The password must match.</div>
+                  </div>
                   </div>
                 </form>
               </div>
